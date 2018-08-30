@@ -1,0 +1,932 @@
+/*奇数背景颜色*/
+
+@bg_odd_color: #F3F3F3;
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    min-width: 1235px;
+    #content {
+        .warp {
+            padding-top: 45px;
+            padding-bottom: 38px;
+            .warp-header {
+                &>h3 {
+                    text-align: center;
+                    margin: 0px auto 18px;
+                    font-size: 30px;
+                    color: #444;
+                    opacity: 0;
+                    transition: all 2s;
+                }
+                .header-block {
+                    margin: 0 auto;
+                    text-align: center;
+                    width: 790px;
+                    height: 30px;
+                    margin-bottom: 30px;
+                    display: block;
+                    position: relative;
+                    opacity: 1;
+                    .header-warp {
+                        position: relative;
+                        display: inline-block;
+                        height: 100%;
+                        line-height: 30px;
+                        border: 1px solid #cccccc;
+                        padding: 0 25px;
+                        z-index: 10;
+                        &>span {
+                            line-height: 30px;
+                        }
+                    }
+                    &:after {
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        background-color: #cccccc;
+                        position: absolute;
+                        bottom: 14.5px;
+                        z-index: 1;
+                        left: 0;
+                    }
+                }
+            }
+            .warp-footer {
+                width: 320px;
+                height: 40px;
+                border: 1px solid #444;
+                margin: 35px auto 0px;
+                border-radius: 3px;
+                text-align: center;
+                cursor: pointer;
+                opacity: 0;
+                transition: opacity 1s;
+                &>a {
+                    width: 100%;
+                    color: #444444;
+                    font-size: 16px;
+                    font-weight: bold;
+                    display: inline-block;
+                    height: 100%;
+                    line-height: 40px;
+                    text-decoration: none;
+                    transition: all 0.2s;
+                }
+                &:hover {
+                    border: 1px solid #0099ff;
+                    height: 40px;
+                    background-color: #0099ff;
+                    border-bottom: 5px solid #0078c8;
+                    &>a {
+                        color: #FFF;
+                        height: 100%;
+                        font-weight: bold;
+                        line-height: 36px;
+                    }
+                }
+            }
+        }
+        .warp:nth-child(odd) {
+            background-color: @bg_odd_color;
+            .header-warp {
+                background-color: #F3F3F3;
+            }
+        }
+        .warp:nth-child(even) {
+            background-color: #FFFFFF;
+            .header-warp {
+                background-color: #FFFFFF;
+            }
+        }
+        .warp:nth-child(1) {
+            background-image: url(../img/院校库_bg.jpg);
+            background-repeat: no-repeat;
+            background-size: 1920px 400px;
+            background-position-x: 0;
+            background-position-y: 0;
+            padding-top: 98px;
+            .title {
+                text-align: center;
+                height: 260px;
+                &>h2 {
+                    font-size: 20px;
+                    color: rgba(255, 255, 255, 0.4);
+                    margin-bottom: 22px;
+                }
+                &>h1 {
+                    display: inline-block;
+                    width: auto;
+                    color: white;
+                    font-size: 66.81px;
+                    margin-bottom: 20px;
+                    margin-top: 0px;
+                    padding: 0px 17px 0px 10px;
+                    border-top: 2px solid rgba(255, 255, 255, 0.4);
+                    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+                }
+                &>h3 {
+                    font-size: 14px;
+                    color: rgba(255, 255, 255, 0.4);
+                }
+            }
+            &>.sub-title {
+                width: 1230px;
+                margin: 0 auto;
+                padding-top: 52px;
+                opacity: 0;
+                background-color: white;
+                transition: all 1s;
+                padding-bottom: 28px;
+                &>.imgs {
+                    display: flex;
+                    display: -webkit-flex;
+                    justify-content: space-between;
+                    img:nth-child(1) {
+                        display: block;
+                        width: 386px;
+                        height: 92px;
+                        margin-left: 40px;
+                    }
+                    img:nth-child(2) {
+                        display: block;
+                        width: 557px;
+                        height: 75px;
+                    }
+                }
+                &>.content {
+                    padding: 0 40px;
+                    margin-top: 20px;
+                    &>p {
+                        font-size: 16px;
+                        color: #444444;
+                        text-indent: 2em;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+        .warp:nth-child(2) {
+            width: 100%;
+            .main {
+                width: 1230px;
+                margin: 0 auto;
+                display: flex;
+                display: -webkit-flex;
+                justify-content: space-between;
+                #frist {
+                    width: 450px;
+                    height: 555px;
+                    opacity: 0;
+                    transition: all 1.5s;
+                    border: 1px solid #e0e0e0;
+                    .top-warp {
+                        display: block;
+                        width: 100%;
+                        height: 300px;
+                        overflow: hidden;
+                        padding: 25px;
+                        border-bottom: 1px solid #e0e0e0;
+                        .top {
+                            width: 100%;
+                            height: 100%;
+                            &>.imgs {
+                                width: 100%;
+                                position: relative;
+                                height: 100px;
+                                &>img {
+                                    display: block;
+                                    width: 400px;
+                                    height: 100px;
+                                }
+                                .pos {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    align-content: center;
+                                    width: 60px;
+                                    height: 60px;
+                                    position: absolute;
+                                    background-color: #0099ff;
+                                    top: 0;
+                                    left: 0;
+                                    .big-sapn {
+                                        height: 40px;
+                                        font-size: 34px;
+                                        color: #FFFFFF;
+                                    }
+                                    .samll-sapn {
+                                        font-size: 12px;
+                                        color: #FFFFFF;
+                                    }
+                                }
+                            }
+                            .top-content {
+                                width: 100%;
+                                &>h4 {
+                                    margin-top: 25px;
+                                    font-size: 18px;
+                                    color: #1a1a1a;
+                                    margin-bottom: 20px;
+                                    width: 100%;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                }
+                                &>p {
+                                    font-size: 14px;
+                                    color: #808080;
+                                    height: 40px;
+                                    line-height: 20px;
+                                }
+                                &>a {
+                                    margin-top: 22px;
+                                    display: block;
+                                    border-radius: 2px;
+                                    line-height: 30px;
+                                    text-align: center;
+                                    width: 120px;
+                                    height: 30px;
+                                    background-color: #0099ff;
+                                    color: white;
+                                    font-size: 14px;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                    .list {
+                        list-style: none;
+                        display: block;
+                        padding: 0px 25px;
+                        &>li {
+                            padding-top: 25px;
+                            padding-bottom: 15px;
+                            &>h4 {
+                                font-size: 14px;
+                                color: #1A1A1A;
+                                margin-bottom: 15px;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                            }
+                            &>p {
+                                font-size: 14px;
+                                color: #969595;
+                                line-height: 23px;
+                                &>a {
+                                    font-size: 14px;
+                                    color: #0078c8;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                        li:nth-child(1) {
+                            border-bottom: 1px solid #e0e0e0;
+                        }
+                    }
+                }
+                #second {
+                    width: 750px;
+                    opacity: 0;
+                    transition: all 1.5s;
+                    border: 1px solid #e0e0e0;
+                    .top-warp {
+                        display: inline-block;
+                        line-height: 60px;
+                        width: 100%;
+                        height: 60px;
+                        border-bottom: 1px solid #e0e0e0;
+                        padding: 0 25px;
+                        .top {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            display: -webkit-flex;
+                            align-content: center;
+                            align-items: center;
+                            justify-content: space-between;
+                            &>h4 {
+                                font-size: 20px;
+                                color: #444444;
+                            }
+                            &>a {
+                                display: block;
+                                width: 50px;
+                                height: 18px;
+                                line-height: 18px;
+                                text-align: center;
+                                border-radius: 3px;
+                                text-decoration: none;
+                                background-color: #0099ff;
+                                font-size: 14px;
+                                color: white;
+                            }
+                        }
+                    }
+                    .list {
+                        list-style: none;
+                        display: inline-block;
+                        width: 700px;
+                        margin: 25px;
+                        height: 441px;
+                        position: relative;
+                        .item {
+                            display: block;
+                            width: 340px;
+                            height: 208px;
+                            position: absolute;
+                            overflow: hidden;
+                            &>.all-img {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .school-img-warp {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, .2);
+                                transition: all 1.5s;
+                                opacity: 1;
+                                z-index: 5;
+                                &>.school-img {
+                                    width: 90px;
+                                    height: 90px;
+                                    display: block;
+                                    z-index: 5;
+                                    position: absolute;
+                                    top: 59px;
+                                    left: 125px;
+                                    border-radius: 100%;
+                                }
+                            }
+                            &>.jiaobiao {
+                                width: 73px;
+                                height: 73px;
+                                display: block;
+                                position: absolute;
+                                top: 0px;
+                                right: 0px;
+                                z-index: 10;
+                                transform: rotateZ(90deg);
+                            }
+                            .modal-info {
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, .5);
+                                transition: all 1.5s;
+                                z-index: 0;
+                                &>.modal-top {
+                                    height: 20px;
+                                    align-items: center;
+                                    margin: 38px 0px 0px 22px;
+                                    &>h5 {
+                                        display: inline-block;
+                                        width: 80%;
+                                        font-size: 18px;
+                                        color: white;
+                                        overflow: hidden;
+                                        height: 25px;
+                                        line-height: 25px;
+                                        white-space: nowrap;
+                                        text-overflow: ellipsis;
+                                    }
+                                }
+                                &>span {
+                                    display: block;
+                                    width: 100%;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    font-size: 14px;
+                                    padding-left: 22px;
+                                    color: white;
+                                }
+                                &>span:nth-child(odd) {
+                                    margin-top: 21px;
+                                    display: block;
+                                    font-size: 12px;
+                                    width: 100%;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                }
+                                &>span:nth-child(even) {
+                                    margin-top: 9px;
+                                    display: block;
+                                    font-size: 12px;
+                                    width: 100%;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                }
+                                &>a {
+                                    display: block;
+                                    margin-left: 22px;
+                                    color: #FFA800;
+                                    margin-top: 32px;
+                                    font-size: 14px;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                        .item:nth-child(1) {
+                            top: 0;
+                            left: 0;
+                            &:hover {
+                                &>.modal-info {
+                                    top: 0;
+                                    z-index: 9;
+                                }
+                                &>.school-img-warp {
+                                    opacity: 0;
+                                    z-index: 0;
+                                }
+                            }
+                        }
+                        .item:nth-child(2) {
+                            top: 0;
+                            right: 0;
+                            &:hover {
+                                &>.modal-info {
+                                    top: 0;
+                                    z-index: 9;
+                                }
+                                &>.school-img-warp {
+                                    opacity: 0;
+                                    z-index: 0;
+                                }
+                            }
+                        }
+                        .item:nth-child(3) {
+                            bottom: 0;
+                            left: 0;
+                            &:hover {
+                                &>.modal-info {
+                                    top: 0;
+                                    z-index: 9;
+                                }
+                                &>.school-img-warp {
+                                    opacity: 0;
+                                    z-index: 0;
+                                }
+                            }
+                        }
+                        .item:nth-child(4) {
+                            bottom: 0;
+                            right: 0;
+                            &:hover {
+                                &>.modal-info {
+                                    top: 0;
+                                    z-index: 9;
+                                }
+                                &>.school-img-warp {
+                                    opacity: 0;
+                                    z-index: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .warp:nth-child(3) {
+            width: 100%;
+            .main {
+                opacity: 0;
+                transform: rotateY(90deg);
+                transition: all 1.5s;
+                width: 1230px;
+                margin: 0 auto;
+                position: relative;
+                #selection-tool {
+                    margin-top: -20px;
+                    width: 1074px;
+                    height: 435px;
+                    .swiper-wrapper {
+                        width: 1074px;
+                        height: 100%;
+                        margin: 0 auto;
+                        .swiper-slide {
+                            width: 250px;
+                            height: 435px;
+                            position: relative;
+                            .bg-blue {
+                                width: 248px;
+                                border: 1px solid #a7dcff;
+                                height: 368px;
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                background-color: #edf7ff;
+                                .top-garden {
+                                    display: flex;
+                                    display: -webkit-flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 132px;
+                                    height: 132px;
+                                    border-radius: 100%;
+                                    position: absolute;
+                                    top: -66px;
+                                    left: 56px;
+                                    z-index: 9;
+                                    border: 1px solid #a7dcff;
+                                    background-color: #F3F3F3;
+                                    &>img {
+                                        display: inline-block;
+                                        width: 90px;
+                                        height: 90px;
+                                        z-index: 12;
+                                    }
+                                    .overspread {
+                                        display: block;
+                                        width: 135px;
+                                        height: 132px;
+                                        position: absolute;
+                                        top: -67px;
+                                        left: -2px;
+                                        z-index: 10;
+                                        background-color: #F3F3F3;
+                                    }
+                                }
+                                .content {
+                                    width: 100%;
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    display: flex;
+                                    display: -webkit-flex;
+                                    justify-content: center;
+                                    flex-direction: column;
+                                    &>h4 {
+                                        display: inline-block;
+                                        width: 194px;
+                                        height: 60px;
+                                        line-height: 60px;
+                                        font-size: 22px;
+                                        font-weight: bold;
+                                        text-align: center;
+                                        margin: 0 auto;
+                                        margin-bottom: 23px;
+                                        color: #1375d1;
+                                        border-bottom: 1px solid #1375d1;
+                                    }
+                                    &>p {
+                                        font-size: 14px;
+                                        color: #1375d1;
+                                        width: 194px;
+                                        margin: 0 auto;
+                                        line-height: 22px;
+                                    }
+                                    &>a {
+                                        display: block;
+                                        width: 120px;
+                                        height: 30px;
+                                        background-color: #0099FF;
+                                        border-radius: 3px;
+                                        line-height: 30px;
+                                        text-align: center;
+                                        font-size: 14px;
+                                        color: white;
+                                        margin: 23px auto;
+                                        &:hover {
+                                            text-decoration: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .swiper-slide:nth-child(odd) {
+                            .bg-blue {
+                                border: 1px solid #a7dcff;
+                                background-color: #edf7ff;
+                                .top-garden {
+                                    border: 1px solid #a7dcff;
+                                }
+                            }
+                        }
+                        .swiper-slide:nth-child(even) {
+                            .bg-blue {
+                                border: 1px solid #d7d7d7;
+                                background-color: #f7f7f7;
+                                .top-garden {
+                                    border: 1px solid #d7d7d7;
+                                }
+                            }
+                        }
+                    }
+                }
+                #btn-next-swiper {
+                    color: black;
+                    &:focus {
+                        border: none;
+                    }
+                }
+                #btn-prev-swiper {
+                    color: black;
+                    &:active {
+                        border: none;
+                    }
+                    &:visited {
+                        border: none;
+                    }
+                }
+            }
+        }
+        .warp:nth-child(4) {
+            width: 100%;
+            .main {
+                width: 1230px;
+                margin: 0 auto;
+                #search-form {
+                    opacity: 0;
+                    transform: rotateY(90deg);
+                    transition: all 1.5s;
+                    width: 1230px;
+                    height: 68px;
+                    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+                    display: flex;
+                    display: -webkit-flex;
+                    justify-content: space-around;
+                    align-content: center;
+                    align-items: center;
+                    .input-list {
+                        display: flex;
+                        display: -webkit-flex;
+                        justify-content: space-around;
+                        align-content: center;
+                        align-items: center;
+                        width: 250px;
+                        height: 40px;
+                        position: relative;
+                        &>select {
+                            height: 36px;
+                            padding-left: 30px;
+                            font-size: 14px;
+                            color: #808080;
+                        }
+                        .font_family {
+                            position: absolute;
+                            font-size: 16px;
+                            left: 13px;
+                        }
+                    }
+                    #search-btn {
+                        width: 130px;
+                        height: 40px;
+                        background-color: #0099ff;
+                        border-radius: 3px;
+                        border: none;
+                        text-align: center;
+                        line-height: 40px;
+                        font-size: 16px;
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+                #main-content {
+                    width: 100%;
+                    margin-top: 30px;
+                    #content-nav {
+                        width: 100%;
+                        opacity: 0;
+                        transition: all 1.5s;
+                        margin-bottom: -20px;
+                        #nav-list {
+                            width: 1074px;
+                            height: 72px;
+                            display: flex;
+                            justify-content: space-around;
+                            margin: 0 auto;
+                            list-style: none;
+                            .nav-item {
+                                width: 220px;
+                                height: 72px;
+                                cursor: pointer;
+                                display: flex;
+                                justify-content: center;
+                                align-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                .item-warp {
+                                    width: 100%;
+                                    height: 50px;
+                                    border-radius: 50px;
+                                    background-color: #d7d7d7;
+                                    font-size: 18px;
+                                    color: #5d5d5d;
+                                    line-height: 50px;
+                                    text-align: center;
+                                    font-weight: bold;
+                                }
+                                .item-point {
+                                    width: 0;
+                                    height: 0;
+                                    padding: 0;
+                                    margin: 0;
+                                    font-size: 0;
+                                    border-top: 10px solid transparent;
+                                    border-left: 10px solid transparent;
+                                    border-right: 10px solid transparent;
+                                    border-bottom: 10px solid transparent;
+                                }
+                            }
+                            .nav-item-active {
+                                .item-warp {
+                                    color: white;
+                                    background-color: #0099ff;
+                                }
+                                .item-point {
+                                    border-top: 10px solid #0099FF;
+                                }
+                            }
+                        }
+                    }
+                    #content-list {
+                        position: relative;
+                        width: 100%;
+                        height: 845px;
+                        opacity: 0;
+                        transition: all 1s;
+                        .content-ul-list {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            list-style: none;
+                            width: 100%;
+                            opacity: 0;
+                            z-index: 0;
+                            transition: all 1.5s;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            .content-li-item {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-end;
+                                margin-top: 20px;
+                                width: 390px;
+                                height: 400px;
+                                position: relative;
+                                border: 1px solid rgba(0, 0, 0, 0.2);
+                                &>.school-icon-warp {
+                                    display: block;
+                                    width: 389px;
+                                    height: 220px;
+                                    position: absolute;
+                                    background-color: rgba(0, 0, 0, 0.2);
+                                    top: 0px;
+                                    left: 0px;
+                                    z-index: 10;
+                                    &>.school-icon {
+                                        width: 120px;
+                                        height: 120px;
+                                        display: block;
+                                        position: absolute;
+                                        top: 55px;
+                                        left: 141px;
+                                        border-radius: 100%;
+                                        z-index: 10;
+                                    }
+                                }
+                                &>.biaoji-img {
+                                    width: 73px;
+                                    height: 73px;
+                                    display: block;
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 0px;
+                                    z-index: 10;
+                                }
+                                &>.school-img {
+                                    display: block;
+                                    width: 389px;
+                                    height: 220px;
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 0px;
+                                    z-index: 5;
+                                }
+                                &>.basic-info {
+                                    margin-left: 20px;
+                                    margin-bottom: 25px;
+                                    &>h5 {
+                                        width: 100%;
+                                        font-size: 18px;
+                                        font-weight: bold;
+                                        color: #1A1A1A;
+                                        overflow: hidden;
+                                        white-space: nowrap;
+                                        text-overflow: ellipsis;
+                                    }
+                                    &>span {
+                                        display: inline-block;
+                                        height: 22px;
+                                        line-height: 22px;
+                                        width: 100%;
+                                        font-size: 14px;
+                                        color: #1A1A1A;
+                                        overflow: hidden;
+                                        white-space: nowrap;
+                                        text-overflow: ellipsis;
+                                    }
+                                    &>.sub-info {
+                                        width: 100%;
+                                        height: 22px;
+                                        &>i {
+                                            height: 22px;
+                                            display: inline-block;
+                                            width: 6%;
+                                            line-height: 22px;
+                                            overflow: hidden;
+                                            color: red;
+                                            margin-right: 1%;
+                                            white-space: nowrap;
+                                            text-overflow: ellipsis;
+                                        }
+                                        &>span:nth-child(2) {
+                                            height: 22px;
+                                            display: inline-block;
+                                            width: 43%;
+                                            line-height: 22px;
+                                            overflow: hidden;
+                                            margin-right: 4%;
+                                            white-space: nowrap;
+                                            text-overflow: ellipsis;
+                                        }
+                                        &>span:nth-child(4) {
+                                            height: 22px;
+                                            display: inline-block;
+                                            width: 30%;
+                                            line-height: 22px;
+                                            overflow: hidden;
+                                            margin-right: 4%;
+                                            white-space: nowrap;
+                                            text-overflow: ellipsis;
+                                        }
+                                    }
+                                }
+                                &>.other-info {
+                                    margin-left: 20px;
+                                    margin-bottom: 25px;
+                                    span {
+                                        font-size: 14px;
+                                        color: #808080;
+                                    }
+                                    &>.first-info {
+                                        height: 22px;
+                                        width: 100%;
+                                        &>span {
+                                            height: 22px;
+                                            display: inline-block;
+                                            width: 40%;
+                                            line-height: 22px;
+                                            overflow: hidden;
+                                            margin-right: 9%;
+                                            white-space: nowrap;
+                                            text-overflow: ellipsis;
+                                        }
+                                    }
+                                    &>.second-info {
+                                        height: 22px;
+                                        width: 100%;
+                                        &>span {
+                                            height: 22px;
+                                            display: inline-block;
+                                            width: 45%;
+                                            line-height: 22px;
+                                            overflow: hidden;
+                                            margin-right: 4%;
+                                            white-space: nowrap;
+                                            text-overflow: ellipsis;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .content-ul-list-active {
+                            opacity: 1;
+                            z-index: 5;
+                            transition: all 1.5s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
