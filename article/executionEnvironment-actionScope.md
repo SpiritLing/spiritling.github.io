@@ -50,7 +50,7 @@ changeColor();
 
 以上代码有3个执行环境：全局环境、`changeColor()` 的局部环境和 `swapColors()` 的局部环境。全局环境中有一个变量 `color` 和一个函数 `changeColor()` 两个。 `changeColor()` 的局部环境中有一个名为 `anotherColor` 的变量和一个名为 `swapColor()` 的函数。`changeColor()` 是可以访问 `color` 变量。`swapColor()` 函数中有一个 `tempColor` 变量，它可以访问到全局变量 `color` 和 `changeColor()` 中的变量，但是 `changeColor()` 却不可用访问 `swapColor()` 中的变量。因为上面两个是  `swapColor()`  的父执行环境，可以访问，而子执行环境无法访问。
 
-![执行环境](/images/screenshot_1532935559805.png)
+![执行环境](https://blog.spiritling.cn/images/screenshot_1532935559805.png)
 
 上图实际的展示了执行环境的作用域链，每个执行环境可以调用父级执行环境，但是无法调用子执行环境。也就是说内部环境可以通过作用域链来访问所有的外部环境，但外部环境不能访问内部环境中的任何变量和函数。
 
@@ -170,7 +170,7 @@ console.log(getColor());  //"blue";
 
 下面这张图可以说明情况：
 
-![js](/images/screenshot_1533181340724.png)
+![js](https://blog.spiritling.cn/images/screenshot_1533181340724.png)
 
 > 当然查询变量也是需要耗费时间的，所以在使用中，尽量多使用局部变量，全局变量尽量少用，否则会污染全局环境，导致命名冲突。
  
