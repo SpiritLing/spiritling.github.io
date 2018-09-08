@@ -11,6 +11,7 @@
 		- [webpack （六） babel](article/webpack-babel)
 		- [webpack （七） 引入第三方库](article/webpack-other-library)
 	- [JavaScript中的函数柯里化](article/javascript-function-currying)
+	- [创建对象及设计模式](article/createObj-constructor)
 	- [JavaScript中的执行环境与作用域以及提升](article/executionEnvironment-actionScope)
 	- [基本类型和引用类型的值](article/primitiveType-referenceType)
 	
