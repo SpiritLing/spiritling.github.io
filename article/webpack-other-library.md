@@ -14,3 +14,4 @@ cnpm install jquery -S
 const $ = require("jquery");
 
 $("body").html("<p>我是由JQuery写出来的</p>")
+```
